@@ -1,4 +1,4 @@
-### photo Gallery
+# Photo Gallery
 
 #### Made using [Api](https://www.pexels.com/api/)
 
