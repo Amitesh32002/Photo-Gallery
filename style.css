@@ -1,0 +1,178 @@
+*
+{
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+
+section
+{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: rgb(223, 204, 241);
+}
+.container
+{
+    width: 90%;
+    margin: 0 auto;
+    background-color: rgb(250, 250, 250);
+    border-radius: 12px;
+    margin-top:5rem;
+    margin-bottom: 5rem;
+    position: relative;
+}
+.container .header
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 4rem;
+}
+.container .header h1{
+    font-size: 2.5rem;
+    font-weight:bolder;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.container .header form
+{
+   display: flex; 
+   align-items: center;
+}
+.container .header form input{
+    border: none;
+    outline: none;
+    background-color: rgb(250, 250, 250);
+    border-bottom: 2px solid rgb(88, 87, 87); 
+    padding:2px 4px;   
+    color: gray;
+}
+ button[type= 'submit']
+{
+    background-color: rgb(231, 140, 140);
+    outline: none;
+    border: none;
+    font-size:1rem;
+    font-weight: bolder;
+    padding:5px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+button
+{
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    padding:10px 30px;
+    cursor: pointer;
+}
+.load_btn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+}
+.container .photo_gallary div
+{
+    display: flex;
+    justify-content: center;
+}
+.container .photo_gallary .image
+{
+    /* background-color: red; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.container .photo_gallary img
+{
+    width: 250px;
+    height: 250px;
+  
+}
+
+.container .photo_gallary  h4{
+    position: absolute;
+    color:rgb(246, 250, 1);
+    bottom: 5px;
+    width:100%;
+    z-index: 10;
+    padding: 5px 4px ;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    visibility: hidden;
+    opacity: 0.8;
+}
+.container .photo_gallary img:hover + h4
+{
+    visibility: visible;
+}
+.container .photo_gallary
+{
+    padding: 2rem 4rem;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
+    row-gap: 20px;
+    column-gap: 40px;
+    justify-content: center;
+    align-content: center;
+}
+@media only screen and (max-width:768px)
+{
+    .container .header
+    {
+        flex-direction: column;
+       
+    }
+    .container .header h1
+    {
+        font-size: 3.5rem;
+    }
+    .container form
+    {
+        padding-top:2rem;
+    }
+    .container .photo_gallary  h4
+    {
+        font-size:14px;
+    }
+}
+    @media only screen and (max-width:425px)
+    {
+   
+        .container .header h1
+        {
+            font-size: 2.6rem;
+        }
+        .container form
+        {
+            padding-top:2rem;
+        }
+    }
+
+
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 50px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: rgb(248, 142, 142);
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 40px;
+      }
+      
+      #myBtn:hover {
+        background-color: #555;
+      }
