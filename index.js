@@ -4,6 +4,8 @@ const gallery = document.querySelector(".photo_gallary");
 const load_more = document.querySelector(".load_more");
 const form = document.querySelector(".header form");
 const input = document.querySelector("input");
+const alert_popup = document.querySelector(".alert_popup");
+const alert_btn = document.querySelector(".alert_popup button");
 let searchedImage;
 
 let pageIndex = 1;
@@ -18,7 +20,7 @@ form.addEventListener('submit', (e) => {
     searchedImage = searchInput;
     if(searchInput  === '')
     {
-        alert("please fill the input field");
+        alert_popup.style.display = 'block';
     }
     else{
         gallery.innerHTML =" ";
@@ -26,7 +28,10 @@ form.addEventListener('submit', (e) => {
     }
 })
 
-
+alert_btn.addEventListener('click',()=>
+{
+    alert_popup.style.display = 'none';
+})
 
 async function searchImages(search)
 {
